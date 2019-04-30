@@ -5,7 +5,7 @@ if number < 0:
     dig = (number * -1) % 10
     if dig > 0:
         print("Last digit of {:d} is -{:d} and is less than 6 and not 0"
-          .format(number, dig))
+              .format(number, dig))
     else:
         print("Last digit of {:d} is {:d} and is 0".format(number, dig))
 else:
