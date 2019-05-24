@@ -1,0 +1,74 @@
+The ``example`` module
+======================
+
+Using ``matrix_divided``
+-------------------
+
+This is an example text file in reStructuredText format.  First import
+``matrix_divided`` from the ``2-matrix_divided`` module:
+
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Now use it:
+
+    >>> matrix = [
+    ...     [2, 4, 6],
+    ...     [12, 10, 8]
+    ... ]
+
+    >>> matrix_divided(matrix, 0)
+    Traceback (most recent call last):
+    ZeroDivisionError: division by zero
+
+    >>> matrix_divided(matrix, "hola")
+    Traceback (most recent call last):
+    TypeError: div must be a number
+
+    >>> matrix_divided(matrix,)
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+    >>> matrix_divided(matrix, None)
+    Traceback (most recent call last):
+    TypeError: div must be a number
+
+    >>> matrix_divided()
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+    >>> matrix_divided(matrix, )
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+    >>> matrix_divided("Hola", 3)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> matrix_divided(matrix, 2)
+    [[1.0, 2.0, 3.0], [6.0, 5.0, 4.0]]
+
+    >>> matrix = [
+    ...     [3.3, 4.4, 6.6],
+    ...     [7.7, 9.9, 8.8]
+    ... ]
+
+    >>> matrix_divided(matrix, 1.1)
+    [[3.0, 4.0, 6.0], [7.0, 9.0, 8.0]]
+
+    >>> matrix = [
+    ...     [3.3, 4.4, 6.6],
+    ...     [7.7, 9.9, 'x']
+    ... ]
+
+    >>> matrix_divided(matrix, 3)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> matrix = [
+    ...     [3.3, 4.4, 6.6],
+    ...     [7.7, 9.9, 5, 4]
+    ... ]
+
+    >>> matrix_divided(matrix, 3)
+    Traceback (most recent call last):
+    TypeError: Each row of the matrix must have the same size
