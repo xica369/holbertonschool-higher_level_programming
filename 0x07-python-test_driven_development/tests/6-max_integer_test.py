@@ -3,8 +3,8 @@
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
-class TestMaxInteger(unittest.TestCase):
 
+class TestMaxInteger(unittest.TestCase):
 
     def test_max_integer_output(self):
         """Function to test the output the function max_integer"""
