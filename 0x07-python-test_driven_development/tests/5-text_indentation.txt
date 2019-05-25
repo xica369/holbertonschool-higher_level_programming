@@ -1,0 +1,36 @@
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Now use it:
+
+    >>> text_indentation(123)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text_indentation(hay tres: amarillo, azul y rojo)
+    Traceback (most recent call last):
+    SyntaxError: invalid syntax
+
+    >>> text_indentation("Otto: hay dos")
+    Otto:
+    <BLANKLINE>
+    hay dos
+
+    >>> text_indentation("uno: dos: tres: cuatro.")
+    uno:
+    <BLANKLINE>
+    dos:
+    <BLANKLINE>
+    tres:
+    <BLANKLINE>
+    cuatro.
+
+    >>> text_indentation("uno? dos. tres:")
+    uno?
+    <BLANKLINE>
+    dos.
+    <BLANKLINE>
+    tres:
+
+    >>> text_indentation()
+    Traceback (most recent call last):
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
