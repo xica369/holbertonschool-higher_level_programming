@@ -40,3 +40,11 @@ Now use it:
 
     >>> add_integer(0, )
     98
+
+    >>> add_integer(21e9090, 3)
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
+
+    >>> add_integer(3, 22e9090)
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
