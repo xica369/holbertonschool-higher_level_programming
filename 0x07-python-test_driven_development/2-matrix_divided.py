@@ -1,12 +1,16 @@
 #!/usr/bin/python3
+"""Module for matrix division"""
+
+
 def matrix_divided(matrix, div):
+    """function for division"""
     if type(div) is not int and type(div) is not float:
         raise TypeError("div must be a number")
     if div == 0:
         raise ZeroDivisionError("division by zero")
     str1 = "matrix must be a matrix (list of lists) of integers/floats"
     str2 = "Each row of the matrix must have the same size"
-    lent =  len(matrix[0])
+    lent = len(matrix[0])
     d = div
 
     for n in matrix:
