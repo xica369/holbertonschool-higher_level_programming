@@ -11,6 +11,9 @@ Now use it:
     Traceback (most recent call last):
     ZeroDivisionError: division by zero
 
+    >>> matrix_divided(matrix, float('Inf'))
+    [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
     >>> matrix_divided(matrix, "hola")
     Traceback (most recent call last):
     TypeError: div must be a number
