@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from json import loands
+from json import loads
 
 
 def load_from_json_file(filename):
