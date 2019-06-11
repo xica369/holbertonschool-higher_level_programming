@@ -4,6 +4,8 @@ from models.base import Base
 
 
 class Rectangle(Base):
+    """class Rectangle"""
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """function init"""
         if type(width) is not int:
@@ -103,10 +105,16 @@ class Rectangle(Base):
                 format(self.id, self.__x, self.__y, self.__width,
                        self.__height))
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """function update all attributes"""
         ar = ["id", "width", "height", "x", "y"]
         i = 0
-        for i in range(len(args)):
-            if i < 5:
-                setattr(self, ar[i], args[i])
+        if args and args != "":
+            for i in range(len(args)):
+                if i < 5:
+                    setattr(self, ar[i], args[i])
+        if kwargs and kwargs != "":
+            for key, value in kwargs.items():
+                for j in ar:
+                    if j == key:
+                        setattr(self, j, value)
