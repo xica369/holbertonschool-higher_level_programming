@@ -1,4 +1,4 @@
-#!/usr/bin/pyton3
+#!/usr/bin/python3
 """Fuction Rectangle"""
 from models.base import Base
 
