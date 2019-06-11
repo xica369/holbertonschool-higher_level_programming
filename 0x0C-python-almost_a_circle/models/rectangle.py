@@ -118,3 +118,9 @@ class Rectangle(Base):
                 for j in ar:
                     if j == key:
                         setattr(self, j, value)
+
+    def to_dictionary(self):
+        """function dictionary"""
+        dic = {"id": self.id, "width": self.__width, "height": self.__height,
+               "x": self.__x, "y": self.__y}
+        return dic
