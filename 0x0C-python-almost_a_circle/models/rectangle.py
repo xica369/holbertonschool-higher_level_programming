@@ -1,6 +1,6 @@
 #!/usr/bin/pyton3
-from models.base import Base
 """Fuction Rectangle"""
+from models.base import Base
 
 
 class Rectangle(Base):
