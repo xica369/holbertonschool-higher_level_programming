@@ -38,3 +38,8 @@ class Square(Rectangle):
                 for j in ar:
                     if j == key:
                         setattr(self, j, value)
+
+    def to_dictionary(self):
+        """function dictionary"""
+        dic = {"id": self.id, "size": self.size, "x": self.x, "y": self.y}
+        return dic
