@@ -51,3 +51,33 @@ class Base:
             dummy = cls(3)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """load from file function"""
+        lis = []
+        name = cls.__name__ + ".json"
+        try:
+            with open(name, "r") as f:
+                read = json.load(f)
+                l = cls.from_json_string(read)
+                dummy = cls.create(l)
+                return dummy
+        except:
+            return lis
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """save to file csv function"""
+        name = cls.__name__ + "csv"
+        with open(name, 'w') as f:
+            for j in list_objs:
+                a = json.dumps(j)
+            f.write(a)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """load from file csv function"""
+        name = cls.__name__ + "csv"
+        with open(name, 'r') as f:
+            return json.loads(f.read())
