@@ -40,3 +40,14 @@ class Base:
         if json_string:
             lis = json.loads(json_string)
         return lis
+
+    @classmethod
+    def create(cls, **dictionary):
+        """create function"""
+        cla = cls.__name__
+        if cla == "Rectangle":
+            dummy = cls(3, 4)
+        if cla == "Square":
+            dummy = cls(3)
+        dummy.update(**dictionary)
+        return dummy
