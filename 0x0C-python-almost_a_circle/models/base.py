@@ -5,7 +5,6 @@ import json
 
 class Base:
     """class Base"""
-
     __nb_objects = 0
 
     def __init__(self, id=None):
@@ -19,6 +18,6 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """to_json_string function"""
-        if list_dictionaries is None or is not list_dictionaries:
+        if not list_dictionaries or list_dictionaries is None:
             return "[]"
         return json.dumps(list_dictionaries)
