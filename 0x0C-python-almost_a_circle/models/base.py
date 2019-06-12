@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """This is the class Base"""
-from json import dumps
+import json
 
 
 class Base:
@@ -21,4 +21,4 @@ class Base:
         """to_json_string function"""
         if list_dictionaries is None or is not list_dictionaries:
             return "[]"
-        return dumps(list_dictionaries)
+        return json.dumps(list_dictionaries)
