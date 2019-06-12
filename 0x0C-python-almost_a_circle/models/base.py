@@ -32,3 +32,11 @@ class Base:
                 lis.append(j.to_dictionary())
         with open(name, 'w') as f:
             f.write(cls.to_json_string(lis))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """from_json_string function"""
+        lis = []
+        if json_string:
+            lis = json.loads(json_string)
+        return lis
