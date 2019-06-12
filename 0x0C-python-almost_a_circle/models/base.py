@@ -69,7 +69,7 @@ class Base:
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """save to file csv function"""
-        name = cls.__name__ + "csv"
+        name = cls.__name__ + ".csv"
         with open(name, 'w') as f:
             for j in list_objs:
                 a = json.dumps(j)
@@ -78,6 +78,6 @@ class Base:
     @classmethod
     def load_from_file_csv(cls):
         """load from file csv function"""
-        name = cls.__name__ + "csv"
+        name = cls.__name__ + ".csv"
         with open(name, 'r') as f:
             return json.loads(f.read())
