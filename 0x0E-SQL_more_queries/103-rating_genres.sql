@@ -1,0 +1,1 @@
+-- Import the database dump from hbtn_0d_tvshows_rate to your MySQL server
