@@ -16,6 +16,6 @@ if __name__ == "__main__":
     ORDER BY id ASC""".format(argv[4]))
     query_rows = cursor.fetchall()
     for row in query_rows:
-        print("{}".format(row))
+        print(row)
     cursor.close()
     conect.close()
