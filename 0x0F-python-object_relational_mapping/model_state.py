@@ -19,6 +19,6 @@ class State(Base):
     class attribute name that represents a column of a string
     with maximum 128 characters and cant be null
     """
-    __tablename__ = 'state'
+    __tablename__ = 'states'
     id = Column(Integer, nullable=False, autoincrement=False, primary_key=True)
     name = Column(String(128), nullable=False)
