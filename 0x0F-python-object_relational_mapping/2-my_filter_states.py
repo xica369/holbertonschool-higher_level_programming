@@ -12,7 +12,7 @@ if __name__ == "__main__":
     cursor = conect.cursor()
     cursor.execute("""SELECT *
     FROM states
-    WHERE name = "{}"
+    WHERE BINARY name = "{}"
     ORDER BY id ASC""".format(argv[4]))
     query_rows = cursor.fetchall()
     for row in query_rows:
