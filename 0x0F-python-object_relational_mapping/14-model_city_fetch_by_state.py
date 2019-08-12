@@ -17,7 +17,7 @@ if __name__ == "__main__":
     session = Session(engine)
     data = session.query(State.name, City.id, City.name)\
                   .select_from(State).join(City, City.state_id == State.id)\
-                                     .order_by(State.id)\
+                                     .order_by(City.id)\
                                      .all()
 
     for row in data:
