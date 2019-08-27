@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Python script that fetches https://intranet.hbtn.io/status """
+""" displays the value of the X-Request-Id variable found in the header """
 
 
 if __name__ == "__main__":
@@ -7,4 +7,4 @@ if __name__ == "__main__":
     from sys import argv
     with request.urlopen(argv[1]) as response:
         html = response.read()
-        print ("{}".format(response.info()['X-Request-Id']))
+        print ("{}".format(response.info().get('X-Request-Id')))
