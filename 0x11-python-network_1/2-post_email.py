@@ -11,4 +11,4 @@ if __name__ == "__main__":
     req = request.Request(argv[1], data)
     with request.urlopen(req) as response:
         html = response.read()
-        print(html)
+        print(html.decode())
