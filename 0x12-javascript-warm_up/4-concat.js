@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// prints the first argument passed to it
+// prints two arguments passed to it - format: first arg "is" second arg
 // If no arguments are passed to the script, print No argument
 
 function prints () {
