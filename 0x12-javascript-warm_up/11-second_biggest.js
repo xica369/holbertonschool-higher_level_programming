@@ -13,9 +13,9 @@ function second_biggest () {
       list.push(parseInt(process.argv[cont]));
       cont++;
     }
+    list.sort((a, b) => a - b);
+    console.log(list[list.length - 2]);
   }
-  list.sort((a, b) => a - b);
-  console.log(list[list.length - 2]);
 }
 
 second_biggest();
