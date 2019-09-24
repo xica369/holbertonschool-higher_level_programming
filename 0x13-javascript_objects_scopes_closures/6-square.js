@@ -1,6 +1,7 @@
 #!/usr/bin/node
-// class Square that defines a square and inherits from Rectangle
-// The constructor must take 1 argument: size
+// class Square that defines a square and inherits from Square
+// method called charPrint(c) that prints the rectangle using the character c
+// If c is undefined, use the character X
 
 const Square_ = require('./5-square');
 
