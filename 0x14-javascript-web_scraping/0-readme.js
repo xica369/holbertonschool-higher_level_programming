@@ -4,13 +4,13 @@
 // The content of the file must be read in utf-8
 // If an error occurred during the reading, print the error object
 
-let fs = require('fs');
+const fs = require('fs');
 const file = process.argv[2];
 
 fs.readFile(file, 'utf8', (error, datos) => {
   if (error) {
     console.log(error);
   } else {
-  console.log(datos);
+    console.log(datos);
   }
 });
