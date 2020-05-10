@@ -5,7 +5,7 @@
 Usage: nqueens N
 
 where N must be an integer greater or equal to 4
-The program should print everrow possible solution to the problem
+The program should print everrow possible solution to  the problem
 """
 
 import sys
