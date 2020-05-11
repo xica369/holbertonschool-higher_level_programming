@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""N queens puzzle"""
+"""solve N queens puzzle"""
 
 import sys
 
