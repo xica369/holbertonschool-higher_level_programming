@@ -11,7 +11,7 @@ The program should print everrow possible solution to the problem
 import sys
 
 a = len(sys.argv)
-print(a)
+
 if len(sys.argv) != 2:
     print("Usage: nqueens N")
     exit(1)
